@@ -76,7 +76,6 @@ class NoteItem extends HTMLElement {
       </div>
     `;
 
-    // Add hover animation
     const noteCard = this.querySelector("div");
     noteCard.addEventListener("mouseenter", () => {
       gsap.to(noteCard, {

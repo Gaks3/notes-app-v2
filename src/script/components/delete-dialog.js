@@ -37,7 +37,6 @@ class DeleteDialog extends HTMLElement {
 
     this.confirmBtn.addEventListener("click", async () => {
       if (this.noteToDelete) {
-        // Disable both buttons and show loading state
         this.setLoading(true);
 
         this.dispatchEvent(

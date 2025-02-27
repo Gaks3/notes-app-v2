@@ -96,21 +96,19 @@ export default class HomeView {
         noteItem.setAttribute("created-at", note.createdAt);
         noteItem.setAttribute("archived", note.archived.toString());
 
-        // Set initial state untuk animasi
         noteItem.style.opacity = "0";
         noteItem.style.transform = "translateY(20px)";
 
         this.notesGrid.appendChild(noteItem);
       });
 
-      // Animate notes dengan GSAP
       gsap.to(this.notesGrid.children, {
         opacity: 1,
         y: 0,
         duration: 0.5,
         stagger: 0.1,
         ease: "back.out(1.7)",
-        clearProps: "all", // Membersihkan inline styles setelah animasi
+        clearProps: "all",
       });
     }
   }
@@ -137,7 +135,6 @@ export default class HomeView {
 
     this.notesGrid.appendChild(notFound);
 
-    // Animate not found message
     gsap.to(notFound, {
       opacity: 1,
       y: 0,
@@ -148,7 +145,6 @@ export default class HomeView {
   }
 
   displayErrorMessage(message) {
-    // Hapus loading spinner jika ada
     const loadingSpinner = this.notesGrid.querySelector("loading-spinner");
     if (loadingSpinner) {
       loadingSpinner.remove();
@@ -167,10 +163,9 @@ export default class HomeView {
       <p class="text-gray-500">${message}</p>
     `;
 
-    this.notesGrid.innerHTML = ""; // Bersihkan grid sebelum menambahkan pesan error
+    this.notesGrid.innerHTML = "";
     this.notesGrid.appendChild(errorMessage);
 
-    // Animate error message
     gsap.to(errorMessage, {
       opacity: 1,
       y: 0,
