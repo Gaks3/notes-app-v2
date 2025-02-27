@@ -6,12 +6,12 @@ class DeleteDialog extends HTMLElement {
 
   render() {
     this.innerHTML = `
-        <dialog id="delete-dialog" class="p-4 rounded-lg shadow-xl w-full max-w-sm backdrop:bg-black backdrop:bg-opacity-50">
+        <dialog id="delete-dialog" class="p-4 rounded-lg shadow-xl w-full max-w-sm backdrop:bg-black/30 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
           <div class="bg-white rounded-lg p-6">
             <h3 class="text-lg font-semibold text-gray-900 mb-4">Delete Note</h3>
             <p class="text-gray-600 mb-6">Are you sure you want to delete this note? This action cannot be undone.</p>
             <div class="flex justify-end gap-3">
-              <button id="cancel-delete" class="px-4 py-2 text-gray-500 hover:text-gray-700 font-medium rounded-md transition-colors duration-300">
+              <button id="cancel-delete" class="px-4 py-2 text-gray-500 font-medium rounded-md transition-colors duration-300 bg-gray-100 hover:bg-gray-200">
                 Cancel
               </button>
               <button id="confirm-delete" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-red-500 text-white font-medium rounded-md hover:bg-red-600 transition-colors duration-300 min-w-[80px]">
