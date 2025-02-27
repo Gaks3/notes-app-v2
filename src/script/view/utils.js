@@ -1,7 +1,3 @@
-export const generateId = () => {
-  return `notes-${Date.now()}`;
-};
-
 export const formatDate = (dateString) => {
   return new Date(dateString).toLocaleString();
 };
