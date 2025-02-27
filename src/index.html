@@ -59,16 +59,15 @@
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4"
         ></div>
       </div>
-
-      <dialog
-        id="note-dialog"
-        class="p-4 rounded-lg shadow-xl w-full max-w-sm md:max-w-md lg:max-w-lg backdrop:bg-black/30"
-      >
-        <note-form></note-form>
-      </dialog>
-
-      <delete-dialog></delete-dialog>
     </main>
+
+    <dialog
+      id="note-dialog"
+      class="p-4 rounded-lg shadow-xl w-full max-w-sm md:max-w-md lg:max-w-lg backdrop:bg-black/30 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
+    >
+      <note-form></note-form>
+    </dialog>
+    <delete-dialog></delete-dialog>
 
     <footer class="mt-10">
       <app-footer></app-footer>
