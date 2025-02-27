@@ -3,6 +3,7 @@ class NoteForm extends HTMLElement {
     this.innerHTML = `
       <form id="note-form" class="bg-white rounded px-8 pt-6 pb-8 mb-4 w-full">
         <div class="mb-4">
+        <h3 class="text-lg font-semibold text-gray-900 mb-4">Create New Note</h3>
           <label class="block text-gray-700 text-sm font-bold mb-2" for="title">
             Title
           </label>
@@ -16,12 +17,12 @@ class NoteForm extends HTMLElement {
           <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline field-sizing-content transition-all duration-300" id="body" placeholder="Note Content" rows="8" required></textarea>
           <p class="text-red-500 text-xs hidden" id="body-error"></p>
         </div>
-        <div class="flex items-center justify-between">
-          <button class="bg-[#007AFF] hover:bg-[#007AFF]/80 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition-colors duration-300" type="submit">
+        <div class="flex justify-end gap-3">
+        <button type="button" id="cancel-btn" class="px-4 py-2 text-gray-500 font-medium rounded-md transition-colors duration-300 bg-gray-100 hover:bg-gray-200">
+          Cancel
+        </button>
+          <button class="bg-[#007AFF] hover:bg-[#007AFF]/80 text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline transition-colors duration-300" type="submit">
             Add Note
-          </button>
-          <button type="button" id="cancel-btn" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition-colors duration-300">
-            Cancel
           </button>
         </div>
       </form>
